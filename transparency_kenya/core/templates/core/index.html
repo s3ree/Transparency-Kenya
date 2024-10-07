@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency Kenya - Home</title>
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'spending_tracker' %}">Spending Tracker</a></li>
+                <li><a href="{% url 'policy_impact' %}">Policy Impact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Transparency Kenya</h1>
+            <p>Our mission is to bring transparency to government spending and policies. Track how public funds are allocated and help us hold the government accountable.</p>
+            <a href="{% url 'spending_tracker' %}"class="cta-btn">Explore Spending Data</a>
+        </section>
+
+        <section class="features">
+            <div class="feature-box">
+                <h2>Track Spending</h2>
+                <p>Explore how the government is allocating funds across sectors like education, healthcare, and infrastructure.</p>
+            </div>
+            <div class="feature-box">
+                <h2>Analyze Policies</h2>
+                <p>Learn how recent laws and policies are impacting the economy and public services.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Transparency Kenya. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

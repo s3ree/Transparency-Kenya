@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency Kenya - Spending Tracker</title>
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'spending_tracker' %}">Spending Tracker</a></li>
+                <li><a href="{% url 'policy_impact' %}">Policy Impact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tracker-header">
+            <h1>Government Spending Tracker</h1>
+            <p>Explore how public funds are allocated across different sectors and regions.</p>
+        </section>
+
+        <section class="search-filters">
+            <form action="#" method="GET">
+                <label for="year">Year:</label>
+                <select name="year" id="year">
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+
+                <label for="sector">Sector:</label>
+                <select name="sector" id="sector">
+                    <option value="all">All Sectors</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="education">Education</option>
+                    <option value="infrastructure">Infrastructure</option>
+                </select>
+
+                <label for="region">Region:</label>
+                <select name="region" id="region">
+                    <option value="all">All Regions</option>
+                    <option value="nairobi">Nairobi</option>
+                    <option value="mombasa">Mombasa</option>
+                    <option value="kisumu">Kisumu</option>
+                </select>
+
+                <button type="submit" class="cta-btn">Filter</button>
+            </form>
+        </section>
+
+        <section class="spending-data">
+            <h2>Spending Breakdown</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Sector</th>
+                        <th>Region</th>
+                        <th>Allocated Funds (KSh)</th>
+                        <th>Actual Spending (KSh)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023</td>
+                        <td>Healthcare</td>
+                        <td>Nairobi</td>
+                        <td>1,000,000,000</td>
+                        <td>950,000,000</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Education</td>
+                        <td>Kisumu</td>
+                        <td>500,000,000</td>
+                        <td>450,000,000</td>
+                    </tr>
+                    <!-- Additional rows will be dynamically generated here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Transparency Kenya. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

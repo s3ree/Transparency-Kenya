@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency Kenya - Policy Impact Tracker</title>
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'spending_tracker' %}">Spending Tracker</a></li>
+                <li><a href="{% url 'policy_impact' %}">Policy Impact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="impact-header">
+            <h1>Policy Impact Tracker</h1>
+            <p>Analyze the effects of government policies on public spending and social equity.</p>
+        </section>
+
+        <section class="policy-data">
+            <h2>Impact Analysis</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Policy Name</th>
+                        <th>Implementation Year</th>
+                        <th>Sector Affected</th>
+                        <th>Funding Change (KSh)</th>
+                        <th>Public Response</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Healthcare Funding Increase</td>
+                        <td>2023</td>
+                        <td>Healthcare</td>
+                        <td>+500,000,000</td>
+                        <td>Positive</td>
+                    </tr>
+                    <tr>
+                        <td>Education Budget Cuts</td>
+                        <td>2022</td>
+                        <td>Education</td>
+                        <td>-300,000,000</td>
+                        <td>Negative</td>
+                    </tr>
+                    <!-- Additional rows will be dynamically generated here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Transparency Kenya. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency Kenya - About Us</title>
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'spending_tracker' %}">Spending Tracker</a></li>
+                <li><a href="{% url 'policy_impact' %}">Policy Impact</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-header">
+            <h1>About Transparency Kenya</h1>
+            <p>Transparency Kenya is an initiative aimed at promoting financial transparency and accountability in the Kenyan government.</p>
+        </section>
+
+        <section class="our-mission">
+            <h2>Our Mission</h2>
+            <p>We strive to empower Kenyan citizens by providing them with access to clear and detailed information on how public funds are being used. Our goal is to foster a culture of accountability and ensure that every Kenyan has the ability to hold their leaders responsible for their financial decisions.</p>
+        </section>
+
+        <section class="our-team">
+            <h2>Our Team</h2>
+            <p>Transparency Kenya was founded by a passionate developer, data analyst, and social justice advocate committed to making a positive impact in Kenya.</p>
+            <ul>
+                <li><strong>David Seree</strong> - Project Lead, Developer, Social Justice Advocate</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Transparency Kenya. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
